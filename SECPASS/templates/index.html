@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+<body>
+    <h1>Password Manager</h1>
+    <form id="password-form">
+        <label for="account">Account Name:</label>
+        <input type="text" id="account" name="account" required><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="hidden" id="action" name="action" value="add-password">
+
+        <button type="submit">Add Password</button>
+        <button type="button" id="get-password">Get Password</button>
+    </form>
+    <div id="result"></div>
+    <div id="get-password-result"></div> <!-- Add this line -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
